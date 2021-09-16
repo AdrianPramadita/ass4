@@ -1,0 +1,470 @@
+{
+	"info": {
+		"_postman_id": "b7ef30a5-0015-4bf2-8147-7c9c9dd65d66",
+		"name": "Assignmen 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "latief123",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "latief",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "latief@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "latief123",
+							"type": "text"
+						},
+						{
+							"key": "level",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://app_assignmen2.test/api/register",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_With_Level",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "owner@example@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "owner123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://app_assignmen2.test/api/proses_login_api",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"proses_login_api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login_Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@example@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://app_assignmen2.test/api/login_token",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"login_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/logout",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authorization User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 8|CHnvVeBBgBGTiBJ97SmtsDtv1BPKI9Iv082XT30X",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/user",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporting income",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|SSFsaWPFPzVDbDqLpLJSmHcNAEkcAz1NT97ryAND",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 9|euLILs8JARcIcSEDPYWlIWzJhQ4sDGLsoCFRHBON",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/incomes",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"incomes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reporting Cost/Spending",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 9|euLILs8JARcIcSEDPYWlIWzJhQ4sDGLsoCFRHBON",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/spendings",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"spendings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Detail Income by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 9|euLILs8JARcIcSEDPYWlIWzJhQ4sDGLsoCFRHBON",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/incomes/1",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"incomes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Detail Spending/Cost by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "10|VkVUCSn7uLNuVKrO4Hb3izKKAbQ1C9pKCBlP14sy",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 9|euLILs8JARcIcSEDPYWlIWzJhQ4sDGLsoCFRHBON",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/spendings/10",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"spendings",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Order List Income By name product, , quantity, date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|SSFsaWPFPzVDbDqLpLJSmHcNAEkcAz1NT97ryAND",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/incomes/paginate?s=2021-03-29",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"incomes",
+						"paginate"
+					],
+					"query": [
+						{
+							"key": "s",
+							"value": "2021-03-29"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sort Order List Income by Asc or Desc By Date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|SSFsaWPFPzVDbDqLpLJSmHcNAEkcAz1NT97ryAND",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/incomes/paginate?sort=asc&s=qui",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"incomes",
+						"paginate"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "asc"
+						},
+						{
+							"key": "s",
+							"value": "qui"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagination order list income with search (date,quantity,name product), and sort",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "11|SSFsaWPFPzVDbDqLpLJSmHcNAEkcAz1NT97ryAND",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://app_assignmen2.test/api/incomes/paginate?sort=2021-06-12\"&page=1&keyword=qui",
+					"protocol": "http",
+					"host": [
+						"app_assignmen2",
+						"test"
+					],
+					"path": [
+						"api",
+						"incomes",
+						"paginate"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "2021-06-12\""
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "keyword",
+							"value": "qui"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
